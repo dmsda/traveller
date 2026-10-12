@@ -1,26 +1,169 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-coral: #FF5B3D;
+  --color-coral-hover: #E84D2F;
+  --color-coral-light: #FF795F;
+  --color-sunset: #FF7A45;
+  --color-sunshine: #FFC94A;
+  --color-cream: #FFF8F2;
+  --color-cream-card: #FFFBF8;
+  --color-cream-border: #EDE7E2;
+  --color-dark: #251613;
+  --color-dark-muted: #6E6462;
+  --color-gray-subtle: #9B918F;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-coral: #FF5B3D;
+  --color-coral-hover: #E84D2F;
+  --color-coral-light: #FF795F;
+  --color-sunset: #FF7A45;
+  --color-sunshine: #FFC94A;
+  --color-cream: #FFF8F2;
+  --color-cream-card: #FFFBF8;
+  --color-cream-border: #EDE7E2;
+  --color-dark: #251613;
+  --color-dark-muted: #6E6462;
+  --color-gray-subtle: #9B918F;
+  --font-sans: var(--font-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--color-dark);
+  background-color: #ffffff;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: var(--color-dark);
+}
+
+/* Form input baseline resets & smooth autofill */
+input[type="email"],
+input[type="text"] {
+  font-family: inherit;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #FAF8F5 inset !important;
+  -webkit-text-fill-color: #251613 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Custom shadows */
+.shadow-soft {
+  box-shadow: 0 10px 30px -4px rgba(37, 22, 19, 0.06), 0 4px 12px -2px rgba(37, 22, 19, 0.03);
+}
+
+.shadow-card-elevated {
+  box-shadow: 0 18px 40px -6px rgba(37, 22, 19, 0.09), 0 6px 16px -2px rgba(37, 22, 19, 0.04);
+}
+
+.shadow-coral-glow {
+  box-shadow: 0 12px 28px -4px rgba(255, 91, 61, 0.35);
+}
+
+.shadow-mockup {
+  box-shadow: 0 25px 60px -12px rgba(37, 22, 19, 0.16), 0 10px 24px -6px rgba(37, 22, 19, 0.08);
+}
+
+/* Text stroke utility for large watermark */
+.watermark-text {
+  font-size: clamp(4rem, 12vw, 11rem);
+  font-weight: 800;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(37, 22, 19, 0.05);
+  letter-spacing: -0.04em;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF8F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #DDD5CD;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5B3D;
+}
+
+/* Accessible focus visible rings */
+:focus-visible {
+  outline: 2px solid #FF5B3D;
+  outline-offset: 2px;
+}
+
+/* Hardware accelerated CSS keyframes for fallback or background animations */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes floatOffset {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulseBlob {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotate(6deg) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(6deg) scale(1.025);
+  }
+}
+
+.animate-float-phone {
+  animation: floatGentle 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-float-card {
+  animation: floatOffset 5.2s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-pulse-center-blob {
+  animation: pulseBlob 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-float-phone,
+  .animate-float-card,
+  .animate-pulse-center-blob {
+    animation: none !important;
+  }
 }

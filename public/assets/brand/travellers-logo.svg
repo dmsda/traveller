@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" width="200" height="48" fill="none">
+  <text x="0" y="34" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="28" font-weight="800" fill="#251613" letter-spacing="-0.5">
+    Travellers
+  </text>
+  <circle cx="168" cy="14" r="3.5" fill="#FF5B3D" />
+</svg>

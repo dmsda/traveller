@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="100%" height="100%" fill="none" opacity="0.85">
+  <defs>
+    <pattern id="dotPattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="1.4" fill="#DDD6CE" />
+    </pattern>
+    <pattern id="dotPatternHighlight" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="1.5" fill="#D2C8BD" />
+    </pattern>
+  </defs>
+
+  <!-- Continents rendered with stylized dot matrix paths for ultra-clean crisp scaling -->
+  <!-- North America -->
+  <path d="M120 70 C160 55, 230 60, 270 85 C285 105, 270 145, 230 160 C215 180, 210 215, 185 240 C170 250, 160 220, 145 200 C130 170, 105 150, 100 120 Z" fill="url(#dotPattern)" />
+  <path d="M140 220 C165 240, 180 270, 195 300 C185 305, 175 285, 160 270 Z" fill="url(#dotPatternHighlight)" />
+  <path d="M210 50 C240 40, 270 45, 260 65 C235 70, 220 60, 210 50 Z" fill="url(#dotPattern)" /> <!-- Greenland -->
+
+  <!-- South America -->
+  <path d="M220 310 C260 305, 305 330, 320 365 C325 400, 290 440, 275 470 C255 490, 240 470, 235 440 C230 400, 210 365, 215 335 Z" fill="url(#dotPattern)" />
+
+  <!-- Europe -->
+  <path d="M460 90 C500 80, 540 85, 560 115 C545 140, 520 150, 485 160 C465 150, 450 130, 455 105 Z" fill="url(#dotPatternHighlight)" />
+  <path d="M480 60 C500 50, 515 55, 510 75 C495 80, 485 70, 480 60 Z" fill="url(#dotPattern)" /> <!-- Scandinavia -->
+  <path d="M440 95 C450 90, 460 95, 455 110 C445 115, 440 105, 440 95 Z" fill="url(#dotPattern)" /> <!-- UK -->
+
+  <!-- Africa -->
+  <path d="M460 180 C520 175, 575 205, 580 250 C585 290, 565 340, 540 380 C515 410, 490 395, 480 360 C465 315, 440 270, 445 220 Z" fill="url(#dotPattern)" />
+  <path d="M575 340 C585 345, 590 370, 580 390 C570 385, 570 360, 575 340 Z" fill="url(#dotPatternHighlight)" /> <!-- Madagascar -->
+
+  <!-- Asia -->
+  <path d="M570 90 C640 70, 750 75, 820 110 C840 150, 810 190, 780 220 C730 240, 680 245, 640 230 C610 210, 580 180, 570 140 Z" fill="url(#dotPattern)" />
+  <path d="M630 225 C665 240, 690 280, 675 320 C655 310, 640 270, 630 225 Z" fill="url(#dotPatternHighlight)" /> <!-- India -->
+  <path d="M720 240 C760 260, 770 300, 750 330 C730 320, 725 280, 720 240 Z" fill="url(#dotPattern)" /> <!-- SE Asia -->
+  <path d="M830 150 C845 160, 840 200, 825 210 C820 185, 825 165, 830 150 Z" fill="url(#dotPatternHighlight)" /> <!-- Japan -->
+
+  <!-- Australia & Oceania -->
+  <path d="M760 360 C820 350, 860 380, 870 420 C855 450, 800 460, 765 440 C745 420, 745 385, 760 360 Z" fill="url(#dotPattern)" />
+  <path d="M880 435 C895 440, 895 465, 885 475 C875 465, 875 445, 880 435 Z" fill="url(#dotPattern)" /> <!-- New Zealand -->
+</svg>
